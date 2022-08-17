@@ -1,14 +1,20 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
-import Onbording from './Components/Onbording';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import Onbording from "./Components/Onbording";
+import { BrowserRouter } from "react-router-dom";
+import { ContextProvider } from "./ContextApi/Context";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <Onbording />
+    <BrowserRouter>
+      <ContextProvider>
+        <Onbording />
+      </ContextProvider>
+    </BrowserRouter>
   </React.StrictMode>
 );
 

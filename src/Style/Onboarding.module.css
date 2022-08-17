@@ -1,23 +1,28 @@
-.onbording_container{
-    width: 450px;
-    height: 650px;
-    border: 1px solid black;
-    margin: 30px auto;
+.onbording_container {
+  width: 450px;
+  height: 650px;
+  border: 1px solid black;
+  margin: 30px auto;
 }
-.onbording_logo{
-    width: 200px;
-    padding-left: 20px;
-    display: flex;
-   margin: 20px auto;
-   border: 1px solid blue; 
+.onbording_logo {
+  width: 200px;
+  padding-left: 20px;
+  display: flex;
+  margin: 40px auto;
 }
-.progrss_bar{
-    height: 100px;
-    border: 1px solid blueviolet;
+.onbording_logo > img {
+  height: 60px;
+  margin-left: 20px;
 }
-.botton_section{
-    height: 400px;
-    padding-left: 20px;
-    margin-top: 20px;
-    border: 1px solid red;
+.onbording_logo > h2 {
+  font-size: 30px;
+  margin-top: 10px;
+}
+.progrss_bar {
+  margin-left: 50px;
+  gap: 30px;
+}
+.botton_section {
+  height: 400px;
+  padding-left: 20px;
 }

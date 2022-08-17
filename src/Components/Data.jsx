@@ -30,3 +30,7 @@ const Data = [
   ];
 
   export default Data;
+
+
+  const steps = ["0", "1", "2", "3"];
+  export {steps}

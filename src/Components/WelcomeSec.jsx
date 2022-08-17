@@ -6,18 +6,19 @@ import H1, {
   Label,
   P,
 } from "./ReuseableComponents";
+import { useNavigate } from "react-router-dom";
 import { Box, Step, StepLabel, Stepper } from "@mui/material";
 import style from "../Style/Onboarding.module.css";
-import steps from "./Data";
-import { useNavigate } from "react-router-dom";
-
-const LetsSee = ({ data }) => {
+import steps from "./Data"
+const Welcome_sec = ({ data }) => {
   const navigate = useNavigate();
+  
+
   return (
     <div>
       <div className={style.progrss_bar}>
         <Box sx={{ width: "85%" }}>
-          <Stepper activeStep={1} alternativeLabel>
+          <Stepper activeStep={0} alternativeLabel>
             {steps.map((label) => (
               <Step key={label}>
                 <StepLabel></StepLabel>
@@ -26,22 +27,22 @@ const LetsSee = ({ data }) => {
           </Stepper>
         </Box>
       </div>
-      <H1>{data[1].title}</H1>
-      <P>{data[1].subtitle}</P>
+      <H1>{data[0].title}</H1>
+      <P>{data[0].subtitle}</P>
       <FormContainer>
-        <Label>{data[1].label1}</Label>
+        <Label>{data[0].label1}</Label>
         <br />
-        <Input />
+        <Input required />
         <br />
-        <Label>{data[1].label2}</Label>
+        <Label>{data[0].label2}</Label>
         <br />
-        <Input />
-        <Button onClick={() => navigate("/planing")}>
-          {data[1].buttonText}
+        <Input required />
+        <Button onClick={() => navigate("/letsee")}>
+          {data[0].buttonText}
         </Button>
       </FormContainer>
     </div>
   );
 };
 
-export default LetsSee;
+export default Welcome_sec;

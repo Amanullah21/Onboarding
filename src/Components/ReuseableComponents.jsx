@@ -53,11 +53,14 @@ const BoxContainer = styled.div`
   display: flex;
   gap: 10px;
   margin-left: 5px;
+  margin-bottom:10px;
 `;
-const Box = styled.div`
+const Box1 = styled.div`
     width:48%
     padding:5px;
     border:1px solid blue;
+    cursor:pointer;
+    $
 `;
 const H3 = styled.h3`
   line-height:0.1px
@@ -73,4 +76,4 @@ const Img = styled.img`
 const BoxText = styled.p`
   text-align:left;
 `
-export { Img, Box, BoxContainer,BoxText, Button };
+export { Img, Box1, BoxContainer,BoxText, Button };
