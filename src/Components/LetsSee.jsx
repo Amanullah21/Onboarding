@@ -6,26 +6,15 @@ import H1, {
   Label,
   P,
 } from "./ReuseableComponents";
-import { Box, Step, StepLabel, Stepper } from "@mui/material";
-import style from "../Style/Onboarding.module.css";
-import steps from "./Data";
 import { useNavigate } from "react-router-dom";
+import { Context } from "../ContextApi/Context";
 
 const LetsSee = ({ data }) => {
   const navigate = useNavigate();
+  const { circleCount } = React.useContext(Context);
+
   return (
     <div>
-      <div className={style.progrss_bar}>
-        <Box sx={{ width: "85%" }}>
-          <Stepper activeStep={1} alternativeLabel>
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel></StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-        </Box>
-      </div>
       <H1>{data[1].title}</H1>
       <P>{data[1].subtitle}</P>
       <FormContainer>
@@ -36,7 +25,12 @@ const LetsSee = ({ data }) => {
         <Label>{data[1].label2}</Label>
         <br />
         <Input />
-        <Button onClick={() => navigate("/planing")}>
+        <Button
+          onClick={() => {
+            navigate("/planing");
+            circleCount(2);
+          }}
+        >
           {data[1].buttonText}
         </Button>
       </FormContainer>

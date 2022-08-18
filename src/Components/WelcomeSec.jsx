@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import H1, {
   Button,
   FormContainer,
@@ -7,37 +7,47 @@ import H1, {
   P,
 } from "./ReuseableComponents";
 import { useNavigate } from "react-router-dom";
-import { Box, Step, StepLabel, Stepper } from "@mui/material";
-import style from "../Style/Onboarding.module.css";
-import steps from "./Data"
+import { Context } from "../ContextApi/Context";
+
 const Welcome_sec = ({ data }) => {
   const navigate = useNavigate();
-  
-
+  const init = {
+    name: "",
+    display: "",
+  };
+  const { circleCount } = React.useContext(Context);
+  const [uData, setUData] = useState(init);
+  const inputhandle = (e) => {
+    const { name, value } = e.target;
+    setUData({ ...uData, [name]: value });
+  };
   return (
     <div>
-      <div className={style.progrss_bar}>
-        <Box sx={{ width: "85%" }}>
-          <Stepper activeStep={0} alternativeLabel>
-            {steps.map((label) => (
-              <Step key={label}>
-                <StepLabel></StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-        </Box>
-      </div>
       <H1>{data[0].title}</H1>
       <P>{data[0].subtitle}</P>
       <FormContainer>
         <Label>{data[0].label1}</Label>
         <br />
-        <Input required />
+        <Input onChange={inputhandle} name="name" value={uData.name} />
         <br />
         <Label>{data[0].label2}</Label>
         <br />
-        <Input required />
-        <Button onClick={() => navigate("/letsee")}>
+        <Input
+          required
+          name="display"
+          onChange={inputhandle}
+          value={uData.display}
+        />
+        <Button
+          onClick={() => {
+            if (uData.name !== "" && uData.display !== "") {
+              navigate("/letsee");
+              circleCount(1);
+            } else {
+              alert("Fill name & display box");
+            }
+          }}
+        >
           {data[0].buttonText}
         </Button>
       </FormContainer>

@@ -58,9 +58,13 @@ const BoxContainer = styled.div`
 const Box1 = styled.div`
     width:48%
     padding:5px;
-    border:1px solid blue;
+    border:1px solid black;
+
     cursor:pointer;
-    $
+    &:hover {
+      border:1px solid blue;
+      width:48.5%;
+    }
 `;
 const H3 = styled.h3`
   line-height:0.1px
