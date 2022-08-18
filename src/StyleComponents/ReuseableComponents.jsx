@@ -14,6 +14,10 @@ const Button = styled.button`
   &:hover {
     background: #1976d2;
   }
+  @media (max-width: 400px) {
+    margin: 10px auto;
+    width: 265px;
+  }
 `;
 
 const Input = styled.input`
@@ -27,6 +31,10 @@ const Input = styled.input`
   border 1px solid #8a93a9;
   margin-bottom: 15px;
   color:black;
+  @media (max-width: 400px) {
+    width: 250px;
+    margin-left: 0px;
+  }
 `;
 
 const Label = styled.label`

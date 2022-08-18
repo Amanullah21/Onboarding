@@ -23,11 +23,11 @@ const Onbording = () => {
   const { count, theme, setDarkTheme } = React.useContext(Context);
   return (
     <OnbordingContainer
-      style={
-        theme === true
-          ? { background: "black", color: "white" }
-          : { background: "white", color: "black" }
-      }
+      // style={
+      //   theme === true
+      //     ? { background: "black", color: "white" }
+      //     : { background: "white", color: "black" }
+      // }
     >
       <div className={style.onbording_logo}>
         <BoxImg src={logo1} alt="Logo" />

@@ -3,9 +3,12 @@ const OnbordingContainer = styled.div`
   width: 420px;
   margin: 25px auto;
   padding: 30px;
-  paddung-top: 50px @media (max-width: 450px) {
-    width: 350px;
+  padding-top: 50px;
+  @media (max-width: 400px) {
+    width: 300px;
+    background:red;
     margin: 30px auto;
+    padding-left:2px
   }
 `;
 
