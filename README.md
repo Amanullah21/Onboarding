@@ -1,7 +1,7 @@
 
 # Eden Onboarding Process
 
-<img src="src/Photo/home.PNG"> <br/>
+<img src="../../ReadmeImage/welcomeImg.PNG"> <br/>
 ## Tech Stacks Used
 
 - **React Js**
