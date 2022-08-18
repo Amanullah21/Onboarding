@@ -10,6 +10,7 @@ const Button = styled.button`
   font-size: 18px;
   cursor: pointer;
   margin: 5px;
+  margin-top:10px;
   &:hover {
     background: #1976d2;
   }
@@ -37,11 +38,17 @@ const H1 = styled.h1`
   font-weight: 700;
   padding-top: 20px;
   text-align: center;
+  @media (max-width: 450px) {
+    font-size:27px
+  }
 `;
 
 const H3 = styled.h3`
   line-height:0.1px
   font-weight:500
+  @media (max-width: 450px) {
+    font-size:20px
+  }
 `;
 
 const P = styled.p`
@@ -52,6 +59,7 @@ const P = styled.p`
 const Img = styled.img`
   margin-left: 130px;
   margin-top: 50px;
+  border-radius:50px;
 `;
 
 const FormContainer = styled.div`

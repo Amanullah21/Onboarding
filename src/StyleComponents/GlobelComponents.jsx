@@ -1,11 +1,10 @@
 import styled from "styled-components";
 const OnbordingContainer = styled.div`
   width: 420px;
-  background: aqua;
-  margin: 20px auto;
+  margin: 25px auto;
   padding: 30px;
-  @media (max-width: 450px) {
-    width: 370px;
+  paddung-top: 50px @media (max-width: 450px) {
+    width: 350px;
     margin: 30px auto;
   }
 `;
