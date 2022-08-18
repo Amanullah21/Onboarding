@@ -5,7 +5,7 @@ import H1, {
   Input,
   Label,
   P,
-} from "./ReuseableComponents";
+} from "../StyleComponents/ReuseableComponents";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../ContextApi/Context";
 
@@ -21,6 +21,24 @@ const Welcome_sec = ({ data }) => {
     const { name, value } = e.target;
     setUData({ ...uData, [name]: value });
   };
+
+  const submitBtn = () => {
+    if (uData.name !== "" && uData.display !== "") {
+      navigate("/letsee");
+      circleCount(1);
+      fetch("https://adidas-db.herokuapp.com/users", {
+        method: "POST",
+        body: JSON.stringify(uData),
+        headers: { "Content-type": "application/json; charset=UTF-8" },
+      })
+        .then((response) => response.json())
+        .then((json) => console.log(json))
+        .catch((err) => console.log(err));
+    } else {
+      alert("Fill name & display box");
+    }
+  };
+
   return (
     <div>
       <H1>{data[0].title}</H1>
@@ -28,7 +46,12 @@ const Welcome_sec = ({ data }) => {
       <FormContainer>
         <Label>{data[0].label1}</Label>
         <br />
-        <Input placeholder="Md Amanullah" onChange={inputhandle} name="name" value={uData.name} />
+        <Input
+          placeholder="Md Amanullah"
+          onChange={inputhandle}
+          name="name"
+          value={uData.name}
+        />
         <br />
         <Label>{data[0].label2}</Label>
         <br />
@@ -39,18 +62,7 @@ const Welcome_sec = ({ data }) => {
           onChange={inputhandle}
           value={uData.display}
         />
-        <Button
-          onClick={() => {
-            if (uData.name !== "" && uData.display !== "") {
-              navigate("/letsee");
-              circleCount(1);
-            } else {
-              alert("Fill name & display box");
-            }
-          }}
-        >
-          {data[0].buttonText}
-        </Button>
+        <Button onClick={submitBtn}>{data[0].buttonText}</Button>
       </FormContainer>
     </div>
   );

@@ -23,8 +23,9 @@ const Input = styled.input`
   font-size: 20px;
   padding-left: 10px;
   margin: 5px;
-  border
+  border 1px solid #8a93a9;
   margin-bottom: 15px;
+  color:black;
 `;
 
 const Label = styled.label`
@@ -34,7 +35,7 @@ const Label = styled.label`
 const H1 = styled.h1`
   font-size: 28px;
   font-weight: 700;
-  padding-top: 10px;
+  padding-top: 20px;
   text-align: center;
 `;
 
@@ -71,6 +72,7 @@ const BoxContainer = styled.div`
 const Box1 = styled.div`
     width:48%
     padding:10px;
+    border-radius:10px;
     border:0.5px solid black;
     cursor:pointer;
     &:hover {
@@ -78,6 +80,10 @@ const Box1 = styled.div`
       width:48.5%;
     }
 `;
+const BoxImg  = styled.img`
+    border-radius:50%
+`
+export {BoxImg}
 
 const BoxText = styled.p`
   text-align: left;

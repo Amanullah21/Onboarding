@@ -4,16 +4,23 @@ export const Context = createContext();
 
 export const ContextProvider = ({ children }) => {
   const [count, setCount] = useState(0);
+  const [theme,setTheme] = useState(false)
 
   const circleCount = (data) => {
     setCount(data);
   };
+
+  const setDarkTheme = () =>{
+    setTheme(!theme)
+  }
   
   return (
     <Context.Provider
       value={{
         count,
         circleCount,
+        theme,
+        setDarkTheme
       }}
     >
       {children}

@@ -1,9 +1,3 @@
-.onbording_container {
-  width: 450px;
-  height: 650px;
-  margin: 60px auto;
-  /* background-color: aquamarine; */
-}
 .onbording_logo {
   width: 200px;
   padding-left: 20px;
@@ -12,29 +6,25 @@
 }
 .onbording_logo > img {
   height: 60px;
+  border-radius: 50%;
   margin-left: 20px;
 }
 .onbording_logo > h2 {
   font-size: 30px;
   margin-top: 10px;
 }
-.progrss_bar {
-  margin-left: 50px;
-  gap: 30px;
+.darkMode{
+  height: 30px;
+  width: 30px;
+  margin-top: 1px;
+  margin-left: 70px;
+  cursor: pointer;
 }
-.botton_section {
-  height: 400px;
-  padding-left: 40px;
+.darkMode>img{
+    height: 100%;
+    border-radius: 50%;
 }
-
-@media only screen and (max-width: 450px) {
-  .onbording_container {
-    width: 380px;
-    margin: 30px auto;
-  }
-
-  .botton_section {
-    height: 400px;
-    padding-left: 0px;
-  }
+.darkMode:hover{
+  background-color: aliceblue;
+  border-radius: 50%;
 }

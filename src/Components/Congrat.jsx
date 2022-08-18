@@ -1,6 +1,6 @@
 import React from "react";
 import Tick from "../Icon/Tick-icon.PNG";
-import H1, { Button, FormContainer, Img, P } from "./ReuseableComponents";
+import H1, { Button, FormContainer, Img, P } from "../StyleComponents/ReuseableComponents";
 
 const Congrat = ({ data }) => {
   return (

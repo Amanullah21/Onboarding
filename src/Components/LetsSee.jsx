@@ -5,7 +5,7 @@ import H1, {
   Input,
   Label,
   P,
-} from "./ReuseableComponents";
+} from "../StyleComponents/ReuseableComponents";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../ContextApi/Context";
 
