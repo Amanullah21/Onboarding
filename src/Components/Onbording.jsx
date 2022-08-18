@@ -22,12 +22,22 @@ const Onbording = () => {
   const steps = ["0", "1", "2", "3"];
   const { count, theme, setDarkTheme } = React.useContext(Context);
   return (
-    <OnbordingContainer style={theme === true ?{background:"black", color:"white"}:{background:"white", color:"black"}}>
+    <OnbordingContainer
+      style={
+        theme === true
+          ? { background: "black", color: "white" }
+          : { background: "white", color: "black" }
+      }
+    >
       <div className={style.onbording_logo}>
         <BoxImg src={logo1} alt="Logo" />
         <h2 style={{ paddingLeft: "10px" }}>Eden</h2>
         <div className={style.darkMode} onClick={() => setDarkTheme(!theme)}>
-          {theme === false ? <img src={Dark} alt ="Dark Mode"/> : <img src={Light} alt="Light Mode"/>}
+          {theme === false ? (
+            <img src={Dark} alt="Dark Mode" />
+          ) : (
+            <img src={Light} alt="Light Mode" />
+          )}
         </div>
       </div>
       <ProgrssBar>
