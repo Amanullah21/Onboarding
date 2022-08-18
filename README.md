@@ -1,7 +1,7 @@
 
 # Eden Onboarding Process
 
-<img src="../../ReadmeImage/welcomeImg.PNG"> <br/>
+<img src="src/ReadmeImage/welcomeImg.PNG"> <br/>
 ## Tech Stacks Used
 
 - **React Js**
@@ -12,19 +12,19 @@
 
 It is Landing Page and Welcome page
 
-<img src="src/Photo/home.PNG">
+<img src="src/ReadmeImage/welcomeImg.PNG"> <br/>
 <br>
 
 ### Welcome Page Dark Mode
 
-<img src="src/Photo/men.PNG">
-<br>
+<img src="src/ReadmeImage/welcomeImgDark.PNG"> <br/>
 
 ### Some Screenshot
 
-It is Some Page Shinpshot
-
-<img src="src/Photo/products.PNG">
+<img src="src/ReadmeImage/planingDark.PNG"> <br/>
+<img src="src/ReadmeImage/letSeePhoto.PNG"> <br/>
+<img src="src/ReadmeImage/letSeePhotoDark.PNG"> <br/>
+<img src="src/ReadmeImage/congratPhoto.PNG"> <br/>
 <br>
 
 ###  Project Code Link 
