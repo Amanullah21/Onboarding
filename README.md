@@ -1,37 +1,35 @@
-# Clone of Adidas
 
-This repository is for developing the Adidas clone.
+# Eden Onboarding Process
 
-# Eden Onboarding Process?
-
-## Tech Stacks Used:
+<img src="src/Photo/home.PNG"> <br/>
+## Tech Stacks Used
 
 - **React Js**
 - **Style Components**
 - **MUI**
 
-### **Welcome Page Light Mode**
+###  Welcome Page Light Mode 
 
 It is Landing Page and Welcome page
 
 <img src="src/Photo/home.PNG">
 <br>
 
-### **Welcome Page Dark Mode**
+### Welcome Page Dark Mode
 
 <img src="src/Photo/men.PNG">
 <br>
 
-### **Some Screenshot**
+### Some Screenshot
 
 It is Some Page Shinpshot
 
 <img src="src/Photo/products.PNG">
 <br>
 
-## ** Project Code Link **
-
-## ** Project Link **
+###  Project Code Link 
+ 
+###  Project Link 
 
 ## Contributers
 
