@@ -20,11 +20,11 @@ const LetsSee = ({ data }) => {
       <FormContainer>
         <Label>{data[1].label1}</Label>
         <br />
-        <Input />
+        <Input  placeholder="Calci"/>
         <br />
         <Label>{data[1].label2}</Label>
         <br />
-        <Input />
+        <Input placeholder="Example"/>
         <Button
           onClick={() => {
             navigate("/planing");

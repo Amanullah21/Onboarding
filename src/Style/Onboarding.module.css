@@ -1,8 +1,8 @@
 .onbording_container {
   width: 450px;
   height: 650px;
-  border: 1px solid black;
-  margin: 30px auto;
+  margin: 60px auto;
+  /* background-color: aquamarine; */
 }
 .onbording_logo {
   width: 200px;
@@ -24,5 +24,17 @@
 }
 .botton_section {
   height: 400px;
-  padding-left: 20px;
+  padding-left: 40px;
+}
+
+@media only screen and (max-width: 450px) {
+  .onbording_container {
+    width: 380px;
+    margin: 30px auto;
+  }
+
+  .botton_section {
+    height: 400px;
+    padding-left: 0px;
+  }
 }

@@ -28,13 +28,14 @@ const Welcome_sec = ({ data }) => {
       <FormContainer>
         <Label>{data[0].label1}</Label>
         <br />
-        <Input onChange={inputhandle} name="name" value={uData.name} />
+        <Input placeholder="Md Amanullah" onChange={inputhandle} name="name" value={uData.name} />
         <br />
         <Label>{data[0].label2}</Label>
         <br />
         <Input
           required
           name="display"
+          placeholder="Aman"
           onChange={inputhandle}
           value={uData.display}
         />
