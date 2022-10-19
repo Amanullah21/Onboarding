@@ -15,7 +15,7 @@ const Welcome_sec = ({ data }) => {
     name: "",
     display: "",
   };
-  const { circleCount } = React.useContext(Context);
+  const { circleCount, UserName } = React.useContext(Context);
   const [uData, setUData] = useState(init);
   const inputhandle = (e) => {
     const { name, value } = e.target;
@@ -23,9 +23,11 @@ const Welcome_sec = ({ data }) => {
   };
 
   const submitBtn = () => {
+    // console.log(uData);
     if (uData.name !== "" && uData.display !== "") {
       navigate("/letsee");
       circleCount(1);
+      UserName(uData.name);
       fetch("https://adidas-db.herokuapp.com/users", {
         method: "POST",
         body: JSON.stringify(uData),
