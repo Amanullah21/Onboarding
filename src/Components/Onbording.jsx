@@ -21,6 +21,9 @@ import {
 const Onbording = () => {
   const steps = ["0", "1", "2", "3"];
   const { count, theme, setDarkTheme } = React.useContext(Context);
+
+  console.log(theme);
+  // console.log(steps);
   return (
     <OnbordingContainer
       style={
